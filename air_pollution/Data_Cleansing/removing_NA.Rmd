@@ -1,0 +1,29 @@
+Setting directory and read sv file
+
+```{r}
+setwd("C:/Users/optra/Desktop/air_pollution/Data/Orginal_datas")
+air_pollu <- read.csv(file = "orginal_4.csv")
+```
+
+finding how many of NA values in the dataset
+
+```{r}
+is.na(air_pollu)
+table(is.na(air_pollu)) #actual number of NA values
+sum(is.na(air_pollu)) #alternate actual number of NA values
+```
+
+removing raws if NA values are present and find mean of the column and writing into a datasite
+
+```{r}
+na.omit(air_pollu)
+nona_airpollu<-na.omit(air_pollu) 
+mean(air_pollu$so2, na.rm = TRUE)
+
+```
+
+Writing into a csv file
+```{r}
+write.csv(nona_airpollu,"orginal_4.csv")
+```
+
