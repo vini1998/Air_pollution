@@ -1,28 +1,27 @@
-setwd("~/Desktop/pollution")
-
-pollu.full <- read.csv(file = "Original.csv", stringsAsFactors = FALSE, header = TRUE)
+setwd("C:/Users/optra/Desktop/air_pollution/Data/Orginal_datas")
+pollu.full <- read.csv(file = "orginal_3.csv", stringsAsFactors = FALSE, header = TRUE)
 
 
 #pollu.full$PM10 <- scale(pollu.full$PM10)
-pollu.full$scalepm2.5 <- scale(pollu.full$PM.2.5)
-var(pollu.full$PM.2.5)
-sd(pollu.full$PM.2.5)
+pollu.full$scalePM25 <- scale(pollu.full$PM25)
+var(pollu.full$PM25)
+sd(pollu.full$PM25)
 
-y <- pollu.full$scalepm2.5 - mean(pollu.full$scalepm2.5 / sd(pollu.full$scalepm2.5))
+y <- pollu.full$scalePM25 - mean(pollu.full$scalePM25 / sd(pollu.full$scalePM25))
 
 y
 
 mean(y)
 sd(y)
 var(y)
-pollu.full$normpm2.5 <- y
+pollu.full$normPM25 <- y
+
+View(y)
 
 
+pollu.full$PM25
 
 
-pollu.full$PM.2.5
-
-
-mean(pollu.full$PM.2.5)
-var(pollu.full$PM.2.5)
-sd(pollu.full$PM.2.5)
+mean(pollu.full$PM25)
+var(pollu.full$PM25)
+sd(pollu.full$PM25)
