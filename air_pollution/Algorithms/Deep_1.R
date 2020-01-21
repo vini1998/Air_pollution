@@ -154,3 +154,7 @@ plot(testingtarget, pred)
 
 mean(pred)
 
+
+results <- data.frame(actual = testing$v10 prediction = n.results$net.result)
+results
+
