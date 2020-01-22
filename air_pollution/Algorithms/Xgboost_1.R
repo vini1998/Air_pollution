@@ -4,5 +4,3 @@ str(data)
 dim(data)
 summary(data)
 
-
-cor(data$Temperature, data$PM25)
